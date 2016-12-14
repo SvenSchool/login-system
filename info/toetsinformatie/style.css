@@ -1,0 +1,229 @@
+/*
+HTML5 doctor reset.
+
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*
+own style
+*/
+
+body {
+  font-family: arial;
+background: #22788D;
+}
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.4em;
+  text-align: center;
+}
+
+h3 {
+  font-style: 2em;
+}
+
+.date {
+  text-align: right;
+}
+
+header {
+  padding: 20px;
+  min-height: 100px;
+
+}
+
+section.page {
+  background: white;
+  width: 800px;
+  margin: 0 auto;
+  height: 1300px;
+  padding: 20px;
+  font-family: monospace;
+  position: relative;
+}
+
+.page  ul {
+  list-style: none;
+  line-height: 20px;
+}
+
+.page p {
+  line-height: 20px;
+  width: 80%;
+}
+
+dd {
+  margin-left: 20px;
+}
+
+.page h2{
+  text-align: left;
+  margin: 20px;
+}
+
+.page h3 {
+  margin: 20px;
+}
+
+.criteria li{
+  list-style: square;
+  margin-left: 40px;
+}
+
+.page:after, .page:before {
+    background: #f6f6f6;
+    border: 1px solid #ccc;
+    bottom: -3px;
+    content: '';
+    padding: 20px;
+    height: 1300px;
+    /*left: 2px;*/
+    position: absolute;
+    width: 835px;
+    z-index: -10;
+    -webkit-box-shadow: 0 0 3px hsla(0, 0%, 0%, .2);
+    -moz-box-shadow: 0 0 3px hsla(0, 0%, 0%, .2);
+    box-shadow: 0 0 3px hsla(0, 0%, 0%, .2);
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+}
+.page:before {
+    bottom: -5px;
+    left: 0px;
+    width: 800px;
+    content: "succes!";
+    font-size: 7px;
+    text-align: right;
+
+}
+
+.page:after {
+  right: -13px;
+}
+
+.page:hover:after {
+    -webkit-transform: rotate(-2deg) translate(-25px, 0);
+    -moz-transform: rotate(-2deg) translate(-25px, 0);
+    -ms-transform: rotate(-2deg) translate(-25px, 0);
+    -o-transform: rotate(-2deg) translate(-25px, 0);
+    transform: rotate(-2deg) translate(-25px, 0);
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+}
+.page:hover:before {
+    -webkit-transform: rotate(3deg) translate(25px, 0);
+    -moz-transform: rotate(3deg) translate(25px, 0);
+    -ms-transform: rotate(3deg) translate(25px, 0);
+    -o-transform: rotate(3deg) translate(25px, 0);
+    transform: rotate(3deg) translate(25px, 0);
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+}

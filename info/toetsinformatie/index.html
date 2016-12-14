@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Toetsinformatie Loginsysteem</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+      <h1>loginsysteem met php/mysql</h1>
+      <h2><i>TOETSINFORMATIE</i></h2>
+    </header>
+    <div class="container">
+      <section class="page">
+        <div class="page-header">
+          <div class="date">DATUM: 18-11-2014</div>
+
+            <dt><h3>Opdracht:</h3></dt>
+            <dd>
+              <p>Het maken van een inlogsysteem voor het bedrijf Classic Car Models.</p>
+            </dd>
+        </div>
+            <dt><h3>Beschrijving:</h3></dt>
+            <dd>
+              <p>Je krijgt als Webdeveloper de opdracht binnen om het prototype van een inlogsysteem te maken voor het bedrijf Classic Car Models. CCM wilt graag een waterdicht systeem hebben, waarbij op basis van rol binnen het bedrijf, restricties zijn. Deze restricties zijn hieronder te vinden.</p>
+              <p>Er zijn drie rollen waar ingelogd op kan worden:</p>
+              <ul>
+                <li>
+                  <b>Admin</b>: Mag overal in het systeem komen
+                </li>
+                <li>
+                  <b>Sales</b>: Komt alleen op de 'sales' pagina
+                </li>
+                <li>
+                  <b>Finance</b>: Komt alleen bij 'finance' pagina
+
+                </li>
+              </ul>
+            </dd>
+
+            <h2>Criteria</h2>
+            <ul class="criteria">
+              <li>index.php in de root wordt gebruikt als router naar de pagina's</li>
+              <li>Alle inlog afhandelingen in de authController.php</li>
+              <li>Databaseconnectie in config/database.php</li>
+              <li>Inloggen met email en password</li>
+            </ul>
+            <h3>Form validatie</h3>
+            <ul class="criteria">
+              <li>Email moet een email format hebben als input (zowel front-end als back-end)</li>
+              <li>Melding als één van velden niet is ingevuld (zowel front-end als back-end.)</li>
+            </ul>
+            <h3>Form sanitizing</h3>
+            <ul class="criteria">
+              <li>Zorg dat spaties voor en na inloggen worden weggehaald</li>
+              <li>Berichten uit de url veilig maken mbv stripslashes of FILTER_SANITIZE_ENCODED</li>
+              <li>Prepared statements gebruiken om user input te behandelen ter voorkoming van sql injectie</li>
+            </ul>
+            <h3>Messaging</h3>
+            <ul class="criteria">
+              <li>Foutafhandeling bij verkeerd inloggen. ("Gebruikersnaam en/of wachtwoord verkeerd") naar inlog.php via index.</li>
+              <li>confirmatie bij juist inloggen ("Welkom < firstName > , uitloggen? (uitloggen moet een link zijn naar uitlogscript) ");</li>
+              <li>foutafhandeling bij niet ge-autoriseerd bezoek pagina ("Permission denied") -> naar < rol >.php via index</li>
+              <li>confirmatie bij uitloggen ('u bent succesvol uitgelogd') -> naar inlog.php via index</li>
+          </ul>
+
+          <h3>Authorisatie</h3>
+          <ul class="criteria">
+            <li>Er wordt een session aangemaakt</li>
+            <li>Correcte check of username password gelijk zijn aan item uit database</li>
+            <li>Uitlogscript aanwezig</li>
+          </ul>
+
+          <h3><strong>Bonus</strong></h3>
+          <ul class="criteria">
+            <li>Hou bij hoe vaak de user fout heeft ingelogd</li>
+            <li>indien iemand 3x fout heeft ingelogd, moet er een link in het form komen met 'Wachtwoord vergeten?';
+              Hoeft verder niet specifiek ergens naar te linken</li>
+            <li>indien iemand 5x fout heeft ingelogd, moet er een link komen met ('te vaak foutief ingelogd, neem contact op met administrator')
+              Inloggen moet nu onmogelijk worden gemaakt. (niet alleen via front-end).</li>
+              <li>Voeg een 403 (permission denied) foutmelding aan de header toe als men ergens komt zonder authorisatie.</li>
+            <li>Maak gebruik van classes om je code te organiseren</li>
+        </ul>
+
+      </section>
+    </div>
+
+</body>
+</html>
